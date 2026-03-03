@@ -8,7 +8,7 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     background: #f8f9fa;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,74 +16,83 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
     flex: 1;
 }
 
 header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 1rem;
     background: #0066cc;
     color: white;
 }
 
 header h1 {
-    font-size: 2.5rem;          /* разумный размер на мобильном */
+    font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    opacity: 0.9;
 }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin: 2rem 0;
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    margin: 0 auto;
 }
 
 section {
-    padding: 1.5rem;
+    padding: 1.8rem;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 1rem;
     color: #0066cc;
 }
 
-.contacts button {
-    padding: 1rem 2rem;
+.contacts p {
     font-size: 1.1rem;
+}
+
+.contacts button {
+    margin-top: 1rem;
+    padding: 1rem 2.2rem;
+    font-size: 1.15rem;
     background: #0066cc;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.25s ease;
 }
 
 .contacts button:hover {
-    background: #004d99;
+    background: #004080;
+    transform: translateY(-2px);
 }
 
-/* Планшет и выше */
+/* Tablet / small desktop */
 @media (min-width: 768px) {
     .container {
-        padding: 2rem;
+        padding: 2.5rem;
     }
 
     main {
@@ -93,27 +102,24 @@ h2 {
     }
 
     img {
-        width: 40%;
-        max-width: 400px;
+        width: 45%;
+        max-width: 380px;
+        margin: 0;
     }
 
     header h1 {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
     }
 
     h2 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 }
 
-/* Десктоп */
+/* Large desktop */
 @media (min-width: 1024px) {
     .container {
-        padding: 3rem;
-    }
-
-    header h1 {
-        font-size: 4rem;
+        padding: 3.5rem;
     }
 
     main {
@@ -121,6 +127,11 @@ h2 {
     }
 
     img {
-        width: 35%;
+        width: 38%;
+        max-width: 450px;
+    }
+
+    header h1 {
+        font-size: 4.2rem;
     }
 }
